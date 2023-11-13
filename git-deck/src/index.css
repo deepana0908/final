@@ -1,0 +1,35 @@
+body {
+  background-image: url("/public/img/background.jpg");
+  background-size: cover;
+}
+
+/* hide scrollbards and allow child scrolling instead of scrolling entire viewport */
+.no-scrollbars {
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox 64 */
+  -ms-overflow-style: none; /* Internet Explorer 11 */
+}
+
+.no-scrollbars::-webkit-scrollbar {
+  display: none;
+}
+
+/* for the loading fan icon */
+.btn .fa-fan,
+.spinner-icon {
+  animation: animateSpinner infinite 0.8s cubic-bezier(0.4, 0.15, 0.6, 1);
+}
+
+.flash-card {
+  background-image: linear-gradient(to right bottom, #00ff52, #00e1bd, #00b9ff, #0086ff, #1800ff);
+}
+
+@keyframes animateSpinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
